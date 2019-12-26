@@ -12,7 +12,7 @@ export default {
       path: '/',
       component: '../layouts/index',
       routes: [
-        {path: '/', redirect: '/login'},
+        {path: '/', component: 'index'},
         {path: '/home', component: './home/components/'},
       ],
     },
@@ -28,7 +28,7 @@ export default {
       },
       // dynamicImport: true, // 按需加载
       dynamicImport: false, // 按需加载
-      title: '小卖部',
+      title: '组件测试',
       dll: false,
       routes: {
         exclude: [],

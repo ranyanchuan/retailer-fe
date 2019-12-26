@@ -14,21 +14,21 @@ const Router = require('dva/router').routerRedux.ConnectedRouter;
 const routes = [
   {
     path: '/',
-    redirect: '/login',
-    exact: true,
-    _title: '小卖部',
-    _title_default: '小卖部',
-  },
-  {
-    path: '/',
     component: require('../../layouts/index').default,
     routes: [
+      {
+        path: '/',
+        component: require('../index').default,
+        exact: true,
+        _title: '组件测试',
+        _title_default: '组件测试',
+      },
       {
         path: '/home',
         component: require('../home/components').default,
         exact: true,
-        _title: '小卖部',
-        _title_default: '小卖部',
+        _title: '组件测试',
+        _title_default: '组件测试',
       },
       {
         component: () =>
@@ -37,12 +37,12 @@ const routes = [
               .default,
             { pagesPath: 'src/pages', hasRoutesInConfig: true },
           ),
-        _title: '小卖部',
-        _title_default: '小卖部',
+        _title: '组件测试',
+        _title_default: '组件测试',
       },
     ],
-    _title: '小卖部',
-    _title_default: '小卖部',
+    _title: '组件测试',
+    _title_default: '组件测试',
   },
   {
     component: () =>
@@ -51,8 +51,8 @@ const routes = [
           .default,
         { pagesPath: 'src/pages', hasRoutesInConfig: true },
       ),
-    _title: '小卖部',
-    _title_default: '小卖部',
+    _title: '组件测试',
+    _title_default: '组件测试',
   },
 ];
 window.g_routes = routes;
